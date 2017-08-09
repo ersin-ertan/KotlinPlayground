@@ -1,5 +1,5 @@
 package informal/*
-* https://github.com/Kotlin/kotlin-coroutines/blob/master/kotlin-coroutines-informal.md
+* @see <a href="https://github.com/Kotlin/kotlin-coroutines/blob/master/kotlin-coroutines-informal.md</a>
 *
 * What - generators/yield, async/await, composable/delimited continuations
 *
