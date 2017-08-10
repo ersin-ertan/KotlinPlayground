@@ -8,6 +8,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/KotlinPlayground.iml" filepath="$PROJECT_DIR$/.idea/modules/KotlinPlayground.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/KotlinPlayground_main.iml" filepath="$PROJECT_DIR$/.idea/modules/KotlinPlayground_main.iml" group="KotlinPlayground" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/KotlinPlayground_test.iml" filepath="$PROJECT_DIR$/.idea/modules/KotlinPlayground_test.iml" group="KotlinPlayground" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Ktor.iml" filepath="$PROJECT_DIR$/.idea/modules/Ktor.iml" group="Ktor" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Ktor/Ktor_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Ktor/Ktor_main.iml" group="Ktor" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Ktor/Ktor_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Ktor/Ktor_test.iml" group="Ktor" />
     </modules>
   </component>
 </project>

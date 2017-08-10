@@ -10,6 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Coroutines" />
+            <option value="$PROJECT_DIR$/Ktor" />
           </set>
         </option>
         <option name="useAutoImport" value="true" />
