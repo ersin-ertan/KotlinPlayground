@@ -4,6 +4,7 @@ import org.jetbrains.ktor.application.install
 import org.jetbrains.ktor.features.DefaultHeaders
 import org.jetbrains.ktor.http.ContentType // used in second half of tutorial?
 import org.jetbrains.ktor.features.CallLogging
+import org.jetbrains.ktor.response.respond
 import org.jetbrains.ktor.response.respondText
 import org.jetbrains.ktor.routing.Routing
 import org.jetbrains.ktor.routing.get
@@ -24,10 +25,16 @@ fun Application.main(){
     install(CallLogging)
     install(Routing){
         get("/"){
+            // vanilla gson version
             val person = Who("Bill", "Earth")
             val gson = Gson()
             val json = gson.toJson(person)
             call.respondText(json, ContentType.Application.Json)
+
+            // with ktor-gson, didn't work...
+//            val person = Who("Bill", "Earth")
+//            call.respond(person)
+
         }
     }
 }

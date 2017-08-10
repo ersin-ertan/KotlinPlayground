@@ -37,6 +37,9 @@ dependencies {
     compile "org.jetbrains.ktor:ktor-core:$ktor_version"
     compile "org.jetbrains.ktor:ktor-netty:$ktor_version"
     compile "com.google.code.gson:gson:2.8.1"
+
+    // comment suggestion - instead of gson
+    compile "org.jetbrains.ktor:ktor-gson:$ktor_version"
 }
 
 compileKotlin {
