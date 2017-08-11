@@ -2,4 +2,6 @@ rootProject.name = 'KotlinPlayground'
 include 'Coroutines'
 include 'Ktor'
 include '10KotlinTricks'
+include 'DSLs'
+include 'Kotlin102'
 

@@ -6,6 +6,10 @@
       <module name="10KotlinTricks_test" target="1.8" />
       <module name="Coroutines_main" target="1.8" />
       <module name="Coroutines_test" target="1.8" />
+      <module name="DSLs_main" target="1.8" />
+      <module name="DSLs_test" target="1.8" />
+      <module name="Kotlin102_main" target="1.8" />
+      <module name="Kotlin102_test" target="1.8" />
       <module name="KotlinPlayground_main" target="1.8" />
       <module name="KotlinPlayground_test" target="1.8" />
       <module name="Ktor_main" target="1.8" />
