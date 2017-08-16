@@ -3,7 +3,6 @@ import java.util.concurrent.atomic.AtomicInteger
 import kotlin.concurrent.thread
 
 // @see https://kotlinlang.org/docs/tutorials/coroutines-basic-jvm.html
-// @see https://kotlinlang.org/docs/reference/coroutines.html?q=&p=0#experimental-status-of-coroutines
 
 // coroutine is like a light weight thread, able to run in parallel, wait for each other
 // and communicate. But, they are almost free, very cheap, able to create thousands
