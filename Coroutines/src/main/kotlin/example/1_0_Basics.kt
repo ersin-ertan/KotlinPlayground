@@ -1,4 +1,4 @@
-package informal
+package example
 
 import kotlinx.coroutines.experimental.CommonPool
 import kotlinx.coroutines.experimental.delay
@@ -7,14 +7,9 @@ import kotlinx.coroutines.experimental.runBlocking
 import kotlin.repeat
 
 /*
-* @see <a href="https://github.com/Kotlin/kotlin-coroutines/blob/master/kotlin-coroutines-informal.md</a>
+*  @see <a href="https://github.com/Kotlin/kotlinx.coroutines/blob/master/coroutines-guide.md</a>
 *
-* What - generators/yield, async/await, composable/delimited continuations
-*
-* Goals - possible to use coroutines as wrappers for different existing async apis
-* - no dependencies
-* - do both async/await and generator blocks use cases
-* */
+*/
 
 fun launch(){
     launch(CommonPool){ // launch is the coroutine builder, delay is a special suspending function, nonblocking
@@ -50,7 +45,7 @@ fun waitingForAJob(){
 }
 
 fun extractFunctionRefactoring() = runBlocking {
-    val job = launch(CommonPool){ doWorld()}
+    val job = launch(CommonPool){ doWorld() }
     println("hello")
     job.join()
 }

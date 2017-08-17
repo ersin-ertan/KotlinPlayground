@@ -1,4 +1,4 @@
-package informal
+package example
 
 import kotlinx.coroutines.experimental.*
 
