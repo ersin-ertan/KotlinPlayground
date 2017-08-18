@@ -13,7 +13,7 @@ import kotlin.repeat
 
 fun launch(){
     launch(CommonPool){ // launch is the coroutine builder, delay is a special suspending function, nonblocking
-        // suspending the coroutine, only for croutines
+        // suspending the coroutine, only for coroutines
         delay(1000L)
         println("World")
     }

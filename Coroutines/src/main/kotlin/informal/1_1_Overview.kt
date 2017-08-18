@@ -12,17 +12,17 @@ package informal
  ex await and yield are suspending functions defined in a library, standard library provides primitive suspending
  functions to define all other suspending functions
 
-suspending lambda - block of ccode run in a coroutine, like and ordinary lambda expression but its functional type is
+suspending lambda - block of code run in a coroutine, like and ordinary lambda expression but its functional type is
 marked with suspend, like code blocks: launch, future, buildSequence
 suspending function calls inside inline lambdas like apply block are allowed bot no in the noinline or crossinline inner
 lambda expressions. A suspension is treated as a special kind of non local control transfer
 
-suspending function type - for suspendinf gunctions and lambdas, like regular function types but with suspend.
+suspending function type - for suspending functions and lambdas, like regular function types but with suspend.
 suspend () -> Int is an example without arguments returning an Int
 
 coroutine builder - a function with the argument ofa suspending lambda, that creates a coroutine and optionally
 gives access to its result from some form. Ex. launch, future, buildSequence, that are defined in a library. The
-standard lib provides primitve coroutine builders that are used to define all other coroutine builders
+standard lib provides primitive coroutine builders that are used to define all other coroutine builders
 
 kotlin doesn't have keywords to define and start coroutines, because they are simply functions.
 
@@ -35,16 +35,16 @@ buildSequence {
     for (i in 1..10) yield(i * i)
     println("over")
 }
-every time the coroutine is suspended at the suspending function yield(), the rest of its execcution is represented
+every time the coroutine is suspended at the suspending function yield(), the rest of its execution is represented
 as a continuation, so we have 10 continuations. The first continuation has the value of i=2, a coroutine that is
 created but no started is represented by its initial continuation of type Continuation<Unit> which is the whole execution
 
-in order to support all timpes of async apis, you must minimize parts hard coded into the compiler, thus it is only
+in order to support all types of async apis, you must minimize parts hard coded into the compiler, thus it is only
 responsible for suspending functions, suspending lambdas, and corresponding suspending function types
 */
 
 /*
-* Continuation interrface
+* Continuation interface
 * */
 
 
