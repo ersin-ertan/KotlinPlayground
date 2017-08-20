@@ -11,8 +11,9 @@ import kotlin.repeat
 *
 */
 
-fun launch(){
-    launch(CommonPool){ // launch is the coroutine builder, delay is a special suspending function, nonblocking
+fun launch() {
+    launch(CommonPool) {
+        // launch is the coroutine builder, delay is a special suspending function, nonblocking
         // suspending the coroutine, only for coroutines
         delay(1000L)
         println("World")
@@ -21,10 +22,11 @@ fun launch(){
     Thread.sleep(2000L)
 }
 
-fun blockingAndNonBlocking(){
-    runBlocking <Unit>{ // works like an adaptor used to start top level coroutine, regular code blocks
+fun blockingAndNonBlocking() {
+    runBlocking<Unit> {
+        // works like an adaptor used to start top level coroutine, regular code blocks
         // until the coroutine inside runBlocking is done
-        launch(CommonPool){
+        launch(CommonPool) {
             delay(1000L)
             println("world")
         }
@@ -33,9 +35,10 @@ fun blockingAndNonBlocking(){
     }
 }
 
-fun waitingForAJob(){
+fun waitingForAJob() {
     runBlocking {
-        val job = launch(CommonPool){ // new coroutine with ref to the job
+        val job = launch(CommonPool) {
+            // new coroutine with ref to the job
             delay(1000L)
             println("world")
         }
@@ -45,31 +48,32 @@ fun waitingForAJob(){
 }
 
 fun extractFunctionRefactoring() = runBlocking {
-    val job = launch(CommonPool){ doWorld() }
+    val job = launch(CommonPool) { doWorld() }
     println("hello")
     job.join()
 }
 
-suspend fun doWorld(){
+suspend fun doWorld() {
     delay(1000L)
     println("world")
 }
 
 fun coroutinesLightweight() = runBlocking {
-        var count = 0
-    val jobs = List(100_000){
-        launch(CommonPool){ // coroutines created
+    var count = 0
+    val jobs = List(100_000) {
+        launch(CommonPool) {
+            // coroutines created
             delay(1000L) // initial delay
             print('.')
-            if(++count%50 == 0) println() // doesn't always do 50 because parallel, not sequential
+            if (++count % 50 == 0) println() // doesn't always do 50 because parallel, not sequential
         }
     }
-    jobs.forEach{ it.join() }
+    jobs.forEach { it.join() }
 }
 
 fun likeDaemonThreads() = runBlocking {
-    launch(CommonPool){
-        repeat(1000){ i ->
+    launch(CommonPool) {
+        repeat(1000) { i ->
             println("sleeping $i...")
             delay(200L)
             // active coroutines don't keep the process alive, like daemon threads
@@ -78,7 +82,7 @@ fun likeDaemonThreads() = runBlocking {
     delay(1300L)
 }
 
-fun main(args: Array<String>) {
+fun main(args:Array<String>) {
 //    launch()
 //    blockingAndNonBlocking()
 //    waitingForAJob()
