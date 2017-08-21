@@ -7,13 +7,19 @@ fun Int.fromNonBlockingCoroutine() = println("${this} Non Blocking")
 fun Int.fromBlockingCoroutine() = println("${this} Blocking")
 fun Int.startJob() = println("${this} Start Job")
 fun Int.endJob() = println("${this} End Job")
+fun Int.fromSuspendingFuction() = println("${this} Suspending Function")
 
 fun main(args:Array<String>) {
 
 //    nonBlockingCoroutine()
 //    blockingMainThread()
 //    blockingMainThreadWaitingForJobToFinish()
+//    refactoringLaunchsLambda()
+//    lightweight()
+//    likeDaemonThreads()
+//    coroutineCancellation()
 }
+
 
 fun nonBlockingCoroutine() {
     1.fromMain()
@@ -106,4 +112,107 @@ fun blockingMainThreadWaitingForJobToFinish() {
     94.fromMain()
     95.fromMain()
     96.fromMain()
+}
+
+fun refactoringLaunchsLambda() {
+
+    1.fromMain()
+
+    launch(CommonPool) {
+        // coroutine logic goes here but we want to extract it and still keep that coroutine scope to use/call other
+        // suspending functions
+        2.fromNonBlockingCoroutine()
+
+        suspendingFuction()
+
+        5.fromNonBlockingCoroutine()
+    }
+
+//    (10).fromMain()
+    // if uncommented, will run after 1 and before 2
+
+    Thread.sleep(2000)
+    // will delay main enough allowing for launch and suspendingFunction to run
+
+    6.fromMain()
+}
+
+suspend fun suspendingFuction() {
+
+    3.fromSuspendingFuction()
+
+    delay(1000) // this suspended function can now call other suspended functions
+
+    4.fromSuspendingFuction()
+}
+
+fun lightweight() = runBlocking {
+
+    1.fromBlockingCoroutine()
+
+    println()
+
+    // create one thousand coroutines
+    val jobs = List(1_000) {
+        launch(CommonPool) { delay(100); print("$it ") }
+    }
+
+    // will wait for each to finish, all are created in parallel else sequentially we wait for 1_000 * 100ms delay = 1 min 40 sec
+    // order is not guaranteed
+    jobs.forEach { it.join() }
+
+    println(); println()
+
+    3.fromBlockingCoroutine()
+}
+
+fun likeDaemonThreads() {
+
+    1.fromMain()
+
+    println()
+
+    launch(CommonPool) {
+        var count = 0
+        while (true) {
+            print("${count++}");
+//            delay(20)
+            // coroutine is running until main terminates, even after the last println
+            // uncomment delay to allow the program to finish sleeping, print, and terminate without the coroutine output
+        }
+    }
+
+    Thread.sleep(100)
+
+    println("\n\n2.fromMain()\n")
+}
+
+fun coroutineCancellation() {
+
+    1.fromMain()
+
+    val job = launch(CommonPool) {
+        var count = 0
+        while (isActive) {
+            print("${count++}")
+        }
+        println("\nisActive = $isActive")
+    }
+
+    Thread.sleep(100)
+
+    job.cancel()
+
+    println()
+
+    // both isActive = false and 2.fromMain will run, there is no guarantee as to how long it takes to cancel, thus isActive
+    // can be before 2.fromMain, or after, which means that counting will occur after 2.fromMain up until isActive = false
+    2.fromMain()
+
+    Thread.sleep(100)
+    // by this point, both 2.fromMain and the coroutine has completed isActive = false, main will terminate after 3 is called
+
+    println()
+
+    3.fromMain()
 }
