@@ -18,6 +18,10 @@ fun main(args:Array<String>) {
 //    lightweight()
 //    likeDaemonThreads()
 //    coroutineCancellation()
+//    cancellationFinally()
+//    nonCancellable()
+//    timeout()
+
 }
 
 
@@ -194,6 +198,7 @@ fun coroutineCancellation() {
     val job = launch(CommonPool) {
         var count = 0
         while (isActive) {
+            // if checking the status of isActive is not implemented, job.cancel() has no effect
             print("${count++}")
         }
         println("\nisActive = $isActive")
@@ -216,3 +221,105 @@ fun coroutineCancellation() {
 
     3.fromMain()
 }
+
+fun cancellationFinally() {
+
+    1.fromMain()
+
+    val job = launch(CommonPool) {
+        try {
+            var count = 0
+            while (isActive) {
+                print("${count++}")
+            }
+            println("\nisActive = $isActive")
+        } finally {
+            println()
+            2.fromMain()
+        }
+    }
+
+    Thread.sleep(100)
+
+    job.cancel()
+    // although cancel is called here, cancellation can occur before or after 3 is called, and will always have
+    // isActive = false and 2.fromMain() called in that order. Finally provides a clear semantic
+
+    println()
+
+    3.fromMain()
+
+    Thread.sleep(100)
+
+    println()
+
+    4.fromMain()
+}
+
+fun nonCancellable() {
+
+    1.fromMain()
+
+    val job = launch(CommonPool) {
+        try {
+            while (isActive) {
+            }
+        } finally {
+
+            2.fromMain()
+
+            run(NonCancellable) {
+
+                3.fromNonBlockingCoroutine()
+
+                delay(100)
+
+                4.fromNonBlockingCoroutine()
+            }
+
+            5.fromMain()
+        }
+    }
+
+    job.cancel()
+    // after cancel, one of 20 or 2 can be called first
+
+    20.fromMain()
+
+    Thread.sleep(200)
+
+    6.fromMain()
+}
+
+fun timeout() {
+
+    1.fromMain()
+
+    runBlocking {
+        try {
+            withTimeout(1000) {
+
+                2.fromBlockingCoroutine()
+
+                nonCompleting()
+                // uncomment to see the caught exception 30
+
+                completing()
+
+                3.fromBlockingCoroutine()
+            }
+        } catch (ce:CancellationException) {
+
+            30.fromBlockingCoroutine() // or Main? to check, delay compiles within this scope
+
+            println("Operation in timeout didn't complete within the set interval")
+        }
+    }
+
+    4.fromMain()
+
+}
+
+suspend fun completing() = delay(100)
+
+suspend fun nonCompleting(){ while (true) delay(100)}
