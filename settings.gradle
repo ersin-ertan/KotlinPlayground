@@ -4,6 +4,7 @@ include 'Ktor'
 include '10KotlinTricks'
 include 'DSLs'
 include 'Kotlin102'
-include 'kotlinx.collections.immutable'
 include 'kotlinx.atomicfu'
+include 'kotlinx.serialization'
+include 'kotlinx.collections.immutable'
 

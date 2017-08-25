@@ -20,9 +20,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Ktor.iml" filepath="$PROJECT_DIR$/.idea/modules/Ktor.iml" group="Ktor" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Ktor/Ktor_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Ktor/Ktor_main.iml" group="Ktor" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Ktor/Ktor_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Ktor/Ktor_test.iml" group="Ktor" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/immutables.iml" filepath="$PROJECT_DIR$/.idea/modules/immutables.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinx.atomicfu.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinx.atomicfu.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinx.collections.immutable.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinx.collections.immutable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinx.serialization.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinx.serialization.iml" />
     </modules>
   </component>
 </project>
