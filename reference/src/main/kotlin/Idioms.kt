@@ -1,3 +1,7 @@
+import java.io.File
+import java.nio.file.Files
+import java.nio.file.Paths
+
 // https://kotlinlang.org/docs/reference/idioms.html
 
 // Idioms - collection of frequently used idioms in kotlin
@@ -79,9 +83,105 @@ fun Any.p() = println(this)
 
 
 // singleton creation
-object MySingleton{
+object MySingleton {
     val name = "Singleton"
 }
 
 
+// if not null
+val files = File("test").listFiles()
 
+fun printFiles() {
+    println(files?.size)
+
+    // if not null and else
+    println((files?.size ?: "empty"))
+}
+
+
+// executing statement if null
+val value = map[1] ?: throw IllegalStateException("no value in map")
+
+// execute if not null
+fun notNull() {
+    val value = null
+    value?.let { println("not null") }
+}
+
+
+// return on when
+fun ret(i:Int) = when (i) {
+    1 -> 1
+    2 -> 2
+    else -> throw IllegalArgumentException("unknown ret param value")
+}
+
+
+// try / catch
+fun test() {
+    val res = try {
+    } catch (e:ArithmeticException) {
+    }
+    res.toString()
+}
+
+
+// if expression
+fun ifExp(i:Int) {
+    val res = if (i > 1) "greater"
+    else if (i < 1) "less"
+    else "equal"
+}
+
+
+// builder style usage of methods that return unit
+fun arrayOfMinusOnes(size:Int):IntArray {
+    return IntArray(size).apply { fill(-1) }
+}
+
+val array = arrayOfMinusOnes(3).get(1)
+
+
+// single expression functions
+fun theAnswer() = 43 // type is inferred
+
+
+// calling multiple methods on an object instance 'with'
+class Turtle {
+    fun penDown() {}
+    fun penUp() {}
+    fun turn(degrees:Double) {}
+    fun forward(pixels:Double) {}
+}
+
+val myTurtle = Turtle()
+fun drawBox() {
+    with(myTurtle) {
+        penDown()
+        for (i in 1..4) {
+            forward(100.0)
+            turn(90.0)
+        }
+        penUp()
+    }
+}
+
+
+// java 7's try with resources
+fun tryWRes() {
+    val stream = Files.newInputStream(Paths.get("/my/location/file.txt"))
+    stream.buffered().reader().use { reader -> println(reader.readText()) }
+}
+
+
+// convenient form for generic functions that require generic type info
+inline fun <reified T:Any> Gson.fromJson(json:Gson.JsonElement):T = this.fromJson(json, T::class.java)
+
+
+// consuming a nullable boolean
+fun consumeBoolean() {
+    val b:Boolean? = null
+    if (b == true) {
+    } else {
+    } // b is false, OR null
+}
