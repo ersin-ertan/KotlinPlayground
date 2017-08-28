@@ -23,6 +23,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinx.atomicfu.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinx.atomicfu.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinx.collections.immutable.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinx.collections.immutable.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinx.serialization.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinx.serialization.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/reference.iml" filepath="$PROJECT_DIR$/.idea/modules/reference.iml" />
     </modules>
   </component>
 </project>
