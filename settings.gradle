@@ -8,4 +8,5 @@ include 'kotlinx.atomicfu'
 include 'kotlinx.serialization'
 include 'kotlinx.collections.immutable'
 include 'reference'
+include 'kotlinDistilled'
 
