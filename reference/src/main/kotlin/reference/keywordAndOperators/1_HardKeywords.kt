@@ -1,7 +1,11 @@
+package reference.keywordAndOperators
+
+import gettingStarted.p
 import java.time.Instant.now as Tn
 
 fun main(args:Array<String>) {
-    hard()
+//    reference.keywordAndOperators.hard()
+    soft()
 }
 
 // Hard keywords - tokens are always interpreted as keywords, cannot be used as identifiers
@@ -89,7 +93,7 @@ fun hard() {
             }
 
             inner class C:B() {
-                override fun f() { // must have open on f() in B
+                override fun f() { // must have open on gettingStarted.practice.getF() in B
                     this@B.javaClass.simpleName.p() // B and C
                     if (this@C.javaClass.simpleName.p().equals(this@B)) throw Exception()
                 }
@@ -115,12 +119,6 @@ fun typeAlias() {
 
 }
 
-interface Interfa
-
-// Soft keywords - act as keywords in applicable contexts, but as identifiers in other contexts
-
-// Modifier keywords - tokens are keywords in modifier lists of declarations,  and can used as identifiers in other contexts
-
-// Special identifiers - identifiers are defined by the compiler in specific contexts and regular identifiers in others
-
-// Operators and special symbols
+interface Interf{
+    fun m() = println(0)
+}

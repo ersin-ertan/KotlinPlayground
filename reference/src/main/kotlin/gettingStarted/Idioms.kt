@@ -1,3 +1,5 @@
+package gettingStarted
+
 import java.io.File
 import java.nio.file.Files
 import java.nio.file.Paths
@@ -16,12 +18,12 @@ data class Customer(var name:String, val email:String)
 fun foo(a:Int = 0, b:String = "") {}
 
 
-// list filtering
+// gettingStarted.getList filtering
 val positives = (-10..10).filter { it > 0 }
 
 
 // String interpolation
-val positivesS = "positives $positives"
+val positivesS = "gettingStarted.getPositives ${positives}"
 
 
 // Instance Checks
@@ -35,7 +37,7 @@ val num = when (1) {
 }
 
 
-// Traversing a map/list of pairs
+// Traversing a gettingStarted.getMap/gettingStarted.getList of pairs
 val map = mapOf(1 to "a", 2 to "be")
 
 fun f() {
@@ -63,10 +65,10 @@ fun r() {
 // Read only lists
 val list = listOf<Int>(1, 2, 3)
 
-// Read only map
+// Read only gettingStarted.getMap
 val map1 = mutableMapOf<String, Int?>("a" to 1)
 
-// map access
+// gettingStarted.getMap access
 val v:Int? = map1["a"] // beware of needed null checks
 
 fun setMapValue() {
@@ -75,7 +77,7 @@ fun setMapValue() {
 
 
 // lazy property
-val l:String by lazy { "l".plus("a").plus("z").plus("y") }
+val l:String by lazy { "gettingStarted.getL".plus("a").plus("z").plus("y") }
 
 
 // Utility print - extension function
@@ -89,7 +91,7 @@ object MySingleton {
 
 
 // if not null
-val files = File("test").listFiles()
+val files = File("gettingStarted.test").listFiles()
 
 fun printFiles() {
     println(files?.size)
@@ -100,7 +102,7 @@ fun printFiles() {
 
 
 // executing statement if null
-val value = map[1] ?: throw IllegalStateException("no value in map")
+val value = map[1] ?: throw IllegalStateException("no value in gettingStarted.getMap")
 
 // execute if not null
 fun notNull() {
@@ -113,7 +115,7 @@ fun notNull() {
 fun ret(i:Int) = when (i) {
     1 -> 1
     2 -> 2
-    else -> throw IllegalArgumentException("unknown ret param value")
+    else -> throw IllegalArgumentException("unknown gettingStarted.ret param value")
 }
 
 

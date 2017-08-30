@@ -1,3 +1,9 @@
+package practice
+
+import gettingStarted.p
+
+// practicing idioms
+
 fun main(args:Array<String>) {
     a
     b
@@ -5,7 +11,7 @@ fun main(args:Array<String>) {
     val c = a?.toString() ?: "a is null" // don't forget this one, null check, else
     // if the value is not null, use the value, ?: else the alternative
 
-    println("list")
+    println("gettingStarted.getList")
     val list = mutableListOf<Int>().apply {
         // apply is like 'with' but on a specific variable, thus there is no need to pass the variable in
         add(1)
@@ -14,7 +20,7 @@ fun main(args:Array<String>) {
         plus(3).p()
     }
 
-    println("d and e")
+    println("d and practice.getE")
     d.p()
     e.p()
 }
@@ -39,7 +45,7 @@ fun maps() {
     print("downTo 1 ")
     for (i in map.size downTo 1) println(map[i]) // half open range - size exclusive
 
-    map.forEach { it.p() } // it is of type map.entry
+    map.forEach { it.p() } // it is of type gettingStarted.getMap.entry
 }
 
 val d = true?.toString() ?: "null"

@@ -1,3 +1,5 @@
+package gettingStarted
+
 // Functions with no args might be interchangeable with read only properties, similar in semantic, stylistic convention
 // are present.
 
