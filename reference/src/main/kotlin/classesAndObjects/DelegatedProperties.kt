@@ -49,3 +49,17 @@ fun main(args:Array<String>) {
 
 // when p, setValue is called, the fist two parameters are the same, and the third hold the value being assigned
 
+
+
+// Local delegated properties since 1.1
+// declare local variables as delegated properties, can make a local variable lazy
+
+class Val
+
+fun example(computeVal:() -> Val){
+    val memoizedVal by lazy(computeVal)
+
+//    if(true && memoizedVal.isValid()) println(memoizedVal) // why is isValid() not a valid method?
+}
+
+// memoizedVal will be computed on first access only, if some true is false, the variable wont be computed at all
