@@ -5,7 +5,6 @@ import java.time.Instant.now as Tn
 
 fun main(args:Array<String>) {
 //    reference.keywordAndOperators.hard()
-    soft()
 }
 
 // Hard keywords - tokens are always interpreted as keywords, cannot be used as identifiers

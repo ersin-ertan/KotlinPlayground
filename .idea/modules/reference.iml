@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module type="JAVA_MODULE" version="4">
+<module external.linked.project.id=":reference" external.linked.project.path="$MODULE_DIR$/../../reference" external.root.project.path="$MODULE_DIR$/../.." external.system.id="GRADLE" external.system.module.group="ca.ersin" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../reference">
-      <sourceFolder url="file://$MODULE_DIR$/../../reference/src/main/kotlin" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/../../reference/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../reference/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../reference/out" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.1.3-2" level="project" />
   </component>
 </module>

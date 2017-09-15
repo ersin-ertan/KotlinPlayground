@@ -20,11 +20,24 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Ktor.iml" filepath="$PROJECT_DIR$/.idea/modules/Ktor.iml" group="Ktor" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Ktor/Ktor_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Ktor/Ktor_main.iml" group="Ktor" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Ktor/Ktor_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Ktor/Ktor_test.iml" group="Ktor" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinDistilled.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinDistilled.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinx.atomicfu.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinx.atomicfu.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinx.collections.immutable.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinx.collections.immutable.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinx.serialization.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinx.serialization.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/reference.iml" filepath="$PROJECT_DIR$/.idea/modules/reference.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/idiomaticKotlin.iml" filepath="$PROJECT_DIR$/.idea/modules/idiomaticKotlin.iml" group="idiomaticKotlin" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/idiomaticKotlin/idiomaticKotlin_main.iml" filepath="$PROJECT_DIR$/.idea/modules/idiomaticKotlin/idiomaticKotlin_main.iml" group="idiomaticKotlin" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/idiomaticKotlin/idiomaticKotlin_test.iml" filepath="$PROJECT_DIR$/.idea/modules/idiomaticKotlin/idiomaticKotlin_test.iml" group="idiomaticKotlin" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinDistilled.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinDistilled.iml" group="kotlinDistilled" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinDistilled/kotlinDistilled_main.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinDistilled/kotlinDistilled_main.iml" group="kotlinDistilled" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinDistilled/kotlinDistilled_test.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinDistilled/kotlinDistilled_test.iml" group="kotlinDistilled" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinx.atomicfu.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinx.atomicfu.iml" group="kotlinx.atomicfu" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinx.atomicfu/kotlinx.atomicfu_main.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinx.atomicfu/kotlinx.atomicfu_main.iml" group="kotlinx.atomicfu" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinx.atomicfu/kotlinx.atomicfu_test.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinx.atomicfu/kotlinx.atomicfu_test.iml" group="kotlinx.atomicfu" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinx.collections.immutable/kotlinx.collections.immutable.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinx.collections.immutable/kotlinx.collections.immutable.iml" group="kotlinx.collections.immutable" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinx.collections.immutable/kotlinx.collections.immutable_main.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinx.collections.immutable/kotlinx.collections.immutable_main.iml" group="kotlinx.collections.immutable" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinx.collections.immutable/kotlinx.collections.immutable_test.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinx.collections.immutable/kotlinx.collections.immutable_test.iml" group="kotlinx.collections.immutable" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinx.serialization.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinx.serialization.iml" group="kotlinx.serialization" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinx.serialization/kotlinx.serialization_main.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinx.serialization/kotlinx.serialization_main.iml" group="kotlinx.serialization" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinx.serialization/kotlinx.serialization_test.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinx.serialization/kotlinx.serialization_test.iml" group="kotlinx.serialization" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/reference.iml" filepath="$PROJECT_DIR$/.idea/modules/reference.iml" group="reference" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/reference/reference_main.iml" filepath="$PROJECT_DIR$/.idea/modules/reference/reference_main.iml" group="reference" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/reference/reference_test.iml" filepath="$PROJECT_DIR$/.idea/modules/reference/reference_test.iml" group="reference" />
     </modules>
   </component>
 </project>

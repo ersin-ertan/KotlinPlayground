@@ -8,12 +8,26 @@
       <module name="Coroutines_test" target="1.8" />
       <module name="DSLs_main" target="1.8" />
       <module name="DSLs_test" target="1.8" />
+      <module name="idiomaticKotlin_main" target="1.8" />
+      <module name="idiomaticKotlin_test" target="1.8" />
       <module name="Kotlin102_main" target="1.8" />
       <module name="Kotlin102_test" target="1.8" />
+      <module name="kotlinDistilled_main" target="1.8" />
+      <module name="kotlinDistilled_test" target="1.8" />
       <module name="KotlinPlayground_main" target="1.8" />
       <module name="KotlinPlayground_test" target="1.8" />
+      <module name="kotlinx.atomicfu_main" target="1.8" />
+      <module name="kotlinx.atomicfu_test" target="1.8" />
+      <module name="kotlinx.collections.immutable_main" target="1.8" />
+      <module name="kotlinx.collections.immutable_test" target="1.8" />
+      <module name="kotlinx.serialization_main" target="1.8" />
+      <module name="kotlinx.serialization_test" target="1.8" />
       <module name="Ktor_main" target="1.8" />
       <module name="Ktor_test" target="1.8" />
+      <module name="reference_main" target="1.8" />
+      <module name="reference_test" target="1.8" />
+      <module name="test_main" target="1.8" />
+      <module name="test_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

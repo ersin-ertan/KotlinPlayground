@@ -14,6 +14,12 @@
             <option value="$PROJECT_DIR$/DSLs" />
             <option value="$PROJECT_DIR$/Kotlin102" />
             <option value="$PROJECT_DIR$/Ktor" />
+            <option value="$PROJECT_DIR$/idiomaticKotlin" />
+            <option value="$PROJECT_DIR$/kotlinDistilled" />
+            <option value="$PROJECT_DIR$/kotlinx.atomicfu" />
+            <option value="$PROJECT_DIR$/kotlinx.collections.immutable" />
+            <option value="$PROJECT_DIR$/kotlinx.serialization" />
+            <option value="$PROJECT_DIR$/reference" />
           </set>
         </option>
         <option name="useAutoImport" value="true" />
