@@ -10,6 +10,8 @@
       <module name="DSLs_test" target="1.8" />
       <module name="idiomaticKotlin_main" target="1.8" />
       <module name="idiomaticKotlin_test" target="1.8" />
+      <module name="kategoryExceptions_main" target="1.8" />
+      <module name="kategoryExceptions_test" target="1.8" />
       <module name="Kotlin102_main" target="1.8" />
       <module name="Kotlin102_test" target="1.8" />
       <module name="kotlinDistilled_main" target="1.8" />
