@@ -51,7 +51,7 @@ fun scoresWithTryCatch():List<Game>? {
         return null
     }
 
-    // won't crash in production,, but will fail to alert us of the issue, thus front end using scores cant react to the
+    // won't crash in production, but will fail to alert us of the issue, thus front end using scores cant react to the
     // error appropriately
 }
 
@@ -78,7 +78,8 @@ fun scoresWithErrorPropogation():List<Game>? {
 // of the call stack where we use the result
 
 
-fun scoresWithTry():Try<List<Game>?> { // article didn't have the ?
+fun scoresWithTry():Try<List<Game>> { // article didn't have the ?, and article didn't have the cast at the return
+    // but it was the cast that was needed
     val httpClient = OkHttpClient()
     return Try.invoke {
         val request = Request.Builder()
@@ -95,9 +96,10 @@ fun scoresWithTry():Try<List<Game>?> { // article didn't have the ?
 
             val msr = jsonAdapter.fromJson(body)
 
-            msr?.data?.games?.game
+//            msr?.data?.games?.game!!.toList()// also works, because the java implementation is returning a mutable list
+            msr?.data?.games?.game as List<Game>// **Note** this cast is needed
         } else
-            emptyList<Game>()
+            emptyList()
     }
 
     // now clients of scores can know from the type signature, that the operation may throw an exception and it must be
@@ -127,7 +129,7 @@ fun main(args:Array<String>) {
         scoresWithTry().fold({ exception ->
             // do something with the exception
             emptyList<Game>()
-        }, { games -> games?.filter { it.awayTeamName == "Cubs" } })
+        }, { games -> games.filter { it.awayTeamName == "Cubs" } })
     }
 
     fun continueingOnWithRecover() {
@@ -138,10 +140,8 @@ fun main(args:Array<String>) {
 
         // Similar to getOrElse, but recover returns another instance of Try
 
-        /*
-          Try.Success(1).recover { 2 } shouldBe Try.Success(1)
-          Try.Failure<Int>(Exception()).recover { 2 } shouldBe Try.Success(2)
-        */
+//          Try.Success(1).recover { 2 } shouldBe Try.Success(1)
+//          Try.Failure<Int>(Exception()).recover { 2 } shouldBe Try.Success(2)
         // not sure why the 'shouldBe' call is not working
     }
 
@@ -151,10 +151,11 @@ fun main(args:Array<String>) {
         // use for comprehensions by directly invoking the monad factory on the Try type. We want to use this when we
         // need to do some operations on the Success value in a sequential manner
 
-        Try.monad().binding {
+        Try.monad().binding { // is there a performance benefit to using coroutines binding method? vs the direct call
+            // and flatmap
             val s = scoresWithTry()
             val games = s.getOrElse { emptyList() }
-            val g:MutableList<Game> = games!!.toMutableList() // article didn't have !!
+            val g:MutableList<Game> = games.toMutableList() // article didn't have !!, fixed due to cast
             g.add(Game())
             yields(g)
         }
@@ -164,7 +165,7 @@ fun main(args:Array<String>) {
 
         Try.monad().binding {
             val games = scoresWithTry().recoverWith { Try.pure(emptyList()) }.bind()
-            val g:MutableList<Game> = games!!.toMutableList() // article didn't have !!
+            val g:MutableList<Game> = games.toMutableList() // article didn't have !!, fixed due to cast
             g.add(Game())
             yields(g)
         }
@@ -176,7 +177,7 @@ fun main(args:Array<String>) {
         scoresWithTry()
                 .recoverWith { Try.pure(emptyList()) }
                 .flatMap { games ->
-                    val g:MutableList<Game> = games!!.toMutableList() // article didn't have !!
+                    val g:MutableList<Game> = games.toMutableList() // article didn't have !!, fixed due to cast
                     g.add(Game())
                     Try.pure(g)
                 }
@@ -194,52 +195,6 @@ fun main(args:Array<String>) {
 //            is Try.Success -> scoresWithTry().value.toString // didn't work
 //            is Try.Failure -> scoresWithTry().exception.toString // didn't work
         }
-    }
-
-}
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-// attempt to get the call to work as in the article, but still requires the ? in Try<List<Game>?>, and newInstance()
-
-fun scores1():Try<List<Game>?> {
-    val httpClient = OkHttpClient()
-    return Try.invoke {
-        val request = Request.Builder()
-                .url(URL)
-                .build()
-
-        val response = httpClient.newCall(request).execute()
-
-        if (response.isSuccessful) {
-            val body = response.body()?.string()
-
-            val json = ObjectMapper().readValue(body, MinisScoreboardResponse::class.java)
-
-            json?.newInstance()?.data?.games?.game
-
-        } else {
-            emptyList<Game>()
-        }
-    }
-}
-
-class ObjectMapper {
-    fun readValue(body:String?, java:Class<MinisScoreboardResponse>):Class<MinisScoreboardResponse>? {
-        val moshi = Moshi.Builder().build()
-        val jsonAdapter = moshi.adapter(java::class.java)
-
-        val json = jsonAdapter.fromJson(body)
-        return json
     }
 
 }
