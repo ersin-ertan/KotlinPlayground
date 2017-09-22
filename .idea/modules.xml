@@ -35,12 +35,18 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinx.collections.immutable/kotlinx.collections.immutable.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinx.collections.immutable/kotlinx.collections.immutable.iml" group="kotlinx.collections.immutable" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinx.collections.immutable/kotlinx.collections.immutable_main.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinx.collections.immutable/kotlinx.collections.immutable_main.iml" group="kotlinx.collections.immutable" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinx.collections.immutable/kotlinx.collections.immutable_test.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinx.collections.immutable/kotlinx.collections.immutable_test.iml" group="kotlinx.collections.immutable" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinx.html.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinx.html.iml" group="kotlinx.html" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinx.html/kotlinx.html_main.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinx.html/kotlinx.html_main.iml" group="kotlinx.html" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinx.html/kotlinx.html_test.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinx.html/kotlinx.html_test.iml" group="kotlinx.html" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinx.serialization.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinx.serialization.iml" group="kotlinx.serialization" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinx.serialization/kotlinx.serialization_main.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinx.serialization/kotlinx.serialization_main.iml" group="kotlinx.serialization" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinx.serialization/kotlinx.serialization_test.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinx.serialization/kotlinx.serialization_test.iml" group="kotlinx.serialization" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/reference.iml" filepath="$PROJECT_DIR$/.idea/modules/reference.iml" group="reference" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/reference/reference_main.iml" filepath="$PROJECT_DIR$/.idea/modules/reference/reference_main.iml" group="reference" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/reference/reference_test.iml" filepath="$PROJECT_DIR$/.idea/modules/reference/reference_test.iml" group="reference" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spek.iml" filepath="$PROJECT_DIR$/.idea/modules/spek.iml" group="spek" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spek/spek_main.iml" filepath="$PROJECT_DIR$/.idea/modules/spek/spek_main.iml" group="spek" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spek/spek_test.iml" filepath="$PROJECT_DIR$/.idea/modules/spek/spek_test.iml" group="spek" />
     </modules>
   </component>
 </project>

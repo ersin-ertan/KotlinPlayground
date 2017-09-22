@@ -19,8 +19,10 @@
             <option value="$PROJECT_DIR$/kotlinDistilled" />
             <option value="$PROJECT_DIR$/kotlinx.atomicfu" />
             <option value="$PROJECT_DIR$/kotlinx.collections.immutable" />
+            <option value="$PROJECT_DIR$/kotlinx.html" />
             <option value="$PROJECT_DIR$/kotlinx.serialization" />
             <option value="$PROJECT_DIR$/reference" />
+            <option value="$PROJECT_DIR$/spek" />
           </set>
         </option>
         <option name="useAutoImport" value="true" />

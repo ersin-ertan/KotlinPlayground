@@ -12,4 +12,6 @@ include 'kotlinDistilled'
 include 'idiomaticKotlin'
 include 'Handling Kotlin Exceptions with Kategory'
 findProject(':Handling Kotlin Exceptions with Kategory')?.name = 'kategoryExceptions'
+include 'kotlinx.html'
+include 'spek'
 
