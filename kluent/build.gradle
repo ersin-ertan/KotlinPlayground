@@ -38,16 +38,12 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
 //    testCompile group: 'junit', name: 'junit', version: '4.12'
 
-    testCompile "org.jetbrains.kotlin:kotlin-test" // or
-//    testCompile 'org.amshove.kluent:kluent:1.29'
+//    testCompile "org.jetbrains.kotlin:kotlin-test" // or
+    testCompile 'org.amshove.kluent:kluent:1.29'
 
 
     testCompile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 //     testRuntime("org.junit.platform:junit-platform-launcher:1.0.0")
-    testCompile('org.jetbrains.spek:spek-subject-extension:1.1.4') {
-        exclude group: 'org.junit.platform'
-        exclude group: 'org.jetbrains.kotlin'
-    }
 
     testCompile "org.junit.platform:junit-platform-runner:1.0.0" // this if you want to right click and run tests
     // but should not be needed for junit 5 and gradle tasks

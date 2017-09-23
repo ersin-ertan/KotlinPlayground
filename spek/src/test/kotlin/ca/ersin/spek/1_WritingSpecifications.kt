@@ -1,8 +1,5 @@
 package ca.ersin.spek
 
-import org.amshove.kluent.`should equal`
-import org.amshove.kluent.`should not equal to`
-import org.amshove.kluent.shouldEqual
 import org.jetbrains.spek.api.Spek
 import org.jetbrains.spek.api.dsl.describe
 import org.jetbrains.spek.api.dsl.it
@@ -39,8 +36,7 @@ object SimpleSpec:Spek({
             val sub = calculator.subtract(2, 1)
 
             it("should return the result of the subtraction of the first minus second") {
-                2 - 1 shouldEqual sub // every version of the assertions have `should equal` back tick versions
-                // don't like them, like the camelCase
+                assertEquals(2 - 1, sub)
             }
         }
     }
