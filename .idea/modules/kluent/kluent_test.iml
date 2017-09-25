@@ -58,7 +58,6 @@
     <orderEntry type="library" name="Gradle: org.objenesis:objenesis:2.5" level="project" />
     <orderEntry type="library" name="Gradle: org.opentest4j:opentest4j:1.0.0" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
-    <orderEntry type="module" module-name="DSLs_main" scope="TEST" />
   </component>
   <component name="TestModuleProperties" production-module="kluent_main" />
 </module>
