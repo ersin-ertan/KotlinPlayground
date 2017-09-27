@@ -1,9 +1,11 @@
+package DSLsWithIdiomaticKotlin
+
 import java.math.BigDecimal
 
 // to extend class without an inheritance chain
 
 fun String.hello(){
-    println("hello")
+    println("DSLsWithIdiomaticKotlin.hello")
 }
 
 infix fun String.shouldEqual(value:String) = this == value
@@ -13,9 +15,9 @@ infix fun String.shouldEqual(value:String) = this == value
 fun main(args: Array<String>) {
     "Hadi ".hello()
 
-    "hello".shouldEqual("hello")
+    "DSLsWithIdiomaticKotlin.hello".shouldEqual("DSLsWithIdiomaticKotlin.hello")
 
-    "hello" shouldEqual "hello"
+    "DSLsWithIdiomaticKotlin.hello" shouldEqual "DSLsWithIdiomaticKotlin.hello"
 
     val bigDec = BigDecimal(1) // get rid of this noise
 

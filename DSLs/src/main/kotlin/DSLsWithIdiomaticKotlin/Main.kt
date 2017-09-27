@@ -1,3 +1,5 @@
+package DSLsWithIdiomaticKotlin
+
 // Creating Small DSLs with Idiomatic Kotlin Talk at Jetbrains Night Seoul 2016
 // https://www.youtube.com/watch?v=-aF4kfrMBKs
 
@@ -24,7 +26,7 @@ fun add(a:Int, b:Int=2, c:Int = 3) = a+b+c
 
 // unit is a singleton pattern
 
-fun hell() = "hell"
+fun hell() = "DSLsWithIdiomaticKotlin.hell"
 
 fun multTwo(i: Int): Int = i*2
 
@@ -33,18 +35,18 @@ fun main(args : Array<String>) {
 //    println(mes)
 //    add(1)
 //    add(1, c = 4)
-    println(higherOrder(1,2, ::intIntAdd))
-    println(higherOrder(1,2, ::intIntSub))
+    println(higherOrder(1, 2, ::intIntAdd))
+    println(higherOrder(1, 2, ::intIntSub))
     println(higherOrderSingle(3, ::multTwo))
 
-    println(higherOrderSingle(2, {x -> x*2})) // passing in the lambda
-    println(higherOrderSingle(3,{it*2})) // if single param, use it
+    println(higherOrderSingle(2, { x -> x * 2 })) // passing in the lambda
+    println(higherOrderSingle(3, { it * 2 })) // if single param, use it
 
-    println(higherOrderSingle(4){
+    println(higherOrderSingle(4) {
         it + 1
     }) // if the function is the last param, but why
 
-    using(MyObj){
+    using(MyObj) {
         // do work
     }
 }
