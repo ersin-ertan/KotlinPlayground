@@ -15,4 +15,5 @@ include 'kotlinx.html'
 include 'spek'
 include 'kluent'
 include 'kotlinx.serialization'
+include 'kotlinByExample'
 

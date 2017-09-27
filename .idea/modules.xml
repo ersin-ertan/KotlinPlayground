@@ -29,6 +29,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kluent.iml" filepath="$PROJECT_DIR$/.idea/modules/kluent.iml" group="kluent" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kluent/kluent_main.iml" filepath="$PROJECT_DIR$/.idea/modules/kluent/kluent_main.iml" group="kluent" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kluent/kluent_test.iml" filepath="$PROJECT_DIR$/.idea/modules/kluent/kluent_test.iml" group="kluent" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinByExample.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinByExample.iml" group="kotlinByExample" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinByExample/kotlinByExample_main.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinByExample/kotlinByExample_main.iml" group="kotlinByExample" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinByExample/kotlinByExample_test.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinByExample/kotlinByExample_test.iml" group="kotlinByExample" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinDistilled.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinDistilled.iml" group="kotlinDistilled" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinDistilled/kotlinDistilled_main.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinDistilled/kotlinDistilled_main.iml" group="kotlinDistilled" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinDistilled/kotlinDistilled_test.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinDistilled/kotlinDistilled_test.iml" group="kotlinDistilled" />

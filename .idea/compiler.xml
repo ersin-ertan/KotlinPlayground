@@ -17,6 +17,8 @@
       <module name="kluent_test" target="1.8" />
       <module name="Kotlin102_main" target="1.8" />
       <module name="Kotlin102_test" target="1.8" />
+      <module name="kotlinByExample_main" target="1.8" />
+      <module name="kotlinByExample_test" target="1.8" />
       <module name="kotlinDistilled_main" target="1.8" />
       <module name="kotlinDistilled_test" target="1.8" />
       <module name="KotlinPlayground_main" target="1.8" />
