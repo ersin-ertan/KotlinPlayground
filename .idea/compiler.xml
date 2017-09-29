@@ -37,6 +37,8 @@
       <module name="reference_test" target="1.8" />
       <module name="spek_main" target="1.8" />
       <module name="spek_test" target="1.8" />
+      <module name="superpowersOfKotlinDelegation_main" target="1.8" />
+      <module name="superpowersOfKotlinDelegation_test" target="1.8" />
       <module name="test_main" target="1.8" />
       <module name="test_test" target="1.8" />
     </bytecodeTargetLevel>

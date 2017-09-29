@@ -53,6 +53,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spek.iml" filepath="$PROJECT_DIR$/.idea/modules/spek.iml" group="spek" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spek/spek_main.iml" filepath="$PROJECT_DIR$/.idea/modules/spek/spek_main.iml" group="spek" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spek/spek_test.iml" filepath="$PROJECT_DIR$/.idea/modules/spek/spek_test.iml" group="spek" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/superpowersOfKotlinDelegation.iml" filepath="$PROJECT_DIR$/.idea/modules/superpowersOfKotlinDelegation.iml" group="superpowersOfKotlinDelegation" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/superpowersOfKotlinDelegation/superpowersOfKotlinDelegation_main.iml" filepath="$PROJECT_DIR$/.idea/modules/superpowersOfKotlinDelegation/superpowersOfKotlinDelegation_main.iml" group="superpowersOfKotlinDelegation" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/superpowersOfKotlinDelegation/superpowersOfKotlinDelegation_test.iml" filepath="$PROJECT_DIR$/.idea/modules/superpowersOfKotlinDelegation/superpowersOfKotlinDelegation_test.iml" group="superpowersOfKotlinDelegation" />
     </modules>
   </component>
 </project>
