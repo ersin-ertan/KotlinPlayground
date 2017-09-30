@@ -1,5 +1,7 @@
 package essentialScala
 
+import p
+
 // Sequencing Computation
 
 // Goal is to use patterns for sequencing computation
@@ -74,3 +76,31 @@ class Failure2<T>():Result<T>()
 // F<T> flatmap(T->F<R>) = F<R>
 // fold is a general transformation for algebraic data types
 // you can teach monads in an introductory course
+
+
+fun main(args:Array<String>) {
+
+    val l = (0..10).toList()
+
+    l.p()
+
+    class Wrapper(val value:Any)
+
+    l.map { listItem -> listItem * 10 }.p()
+
+    l.reduce { acc, curItem -> acc + curItem }.p()
+
+    val listOfIntRanges = listOf(1..10, 11..20, 21..30)
+
+    listOfIntRanges.p()
+
+    listOfIntRanges.flatten().p() // flatten
+    // vs
+    listOfIntRanges.flatMap { intRange -> intRange.map { it + 1 } }.p()
+
+    l.foldRight(100, { i, acc -> acc + i }).p() // 155 result
+
+    l.associateBy { it * 10 }.p()
+
+
+}

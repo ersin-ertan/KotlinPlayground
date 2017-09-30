@@ -3,7 +3,7 @@ package essentialScala
 // Structural Recursion
 
 // Goal is to transform algebraic data types
-// two subb patterns pattern matching and polymorphism
+// two sub patterns pattern matching and polymorphism
 
 
 // Pattern matching
@@ -30,7 +30,7 @@ class E
 class F
 class G
 class H
-
+// --------------------------------------------------
 // Polymorphism
 interface AA {
     fun doSomething():H
@@ -39,8 +39,8 @@ interface AA {
 class BB(val d:D, val e:E):AA {
     override fun doSomething():H = doB(d, e)
 }
-
-// calculation example
+// --------------------------------------------------
+// calculation example, pattern matching
 
 sealed class Calculation1 {
     fun add(value:Int):Calculation1 =
