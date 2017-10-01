@@ -50,7 +50,7 @@ sealed class Result<T> {
 }
 
 class Success2<T>(val value:T):Result<T>()
-class Failure2<T>():Result<T>()
+class Failure2<T>:Result<T>()
 
 // how do we implement fold, with structural recursion pattern, and abstract out the arguments
 

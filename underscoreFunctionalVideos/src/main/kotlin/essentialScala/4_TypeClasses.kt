@@ -9,4 +9,11 @@ package essentialScala
 // Conclusions
 // First three patterns are 90% of the code, with the fourth being 99%
 // Program design can be systematic
-//
+
+
+// testing something
+
+private sealed class S
+private data class SS(val s:String):S() // cannot be both open and data
+//private class SSS(s:String):SS(s)
+private class SSS(s:String):S() // but data subclasses of sealed classes are allowed
