@@ -23,9 +23,12 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/idiomaticKotlin.iml" filepath="$PROJECT_DIR$/.idea/modules/idiomaticKotlin.iml" group="idiomaticKotlin" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/idiomaticKotlin/idiomaticKotlin_main.iml" filepath="$PROJECT_DIR$/.idea/modules/idiomaticKotlin/idiomaticKotlin_main.iml" group="idiomaticKotlin" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/idiomaticKotlin/idiomaticKotlin_test.iml" filepath="$PROJECT_DIR$/.idea/modules/idiomaticKotlin/idiomaticKotlin_test.iml" group="idiomaticKotlin" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kategory.iml" filepath="$PROJECT_DIR$/.idea/modules/kategory.iml" group="kategory" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kategoryExceptions.iml" filepath="$PROJECT_DIR$/.idea/modules/kategoryExceptions.iml" group="kategoryExceptions" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Handling Kotlin Exceptions with Kategory/kategoryExceptions_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Handling Kotlin Exceptions with Kategory/kategoryExceptions_main.iml" group="kategoryExceptions" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Handling Kotlin Exceptions with Kategory/kategoryExceptions_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Handling Kotlin Exceptions with Kategory/kategoryExceptions_test.iml" group="kategoryExceptions" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kategory/kategory_main.iml" filepath="$PROJECT_DIR$/.idea/modules/kategory/kategory_main.iml" group="kategory" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kategory/kategory_test.iml" filepath="$PROJECT_DIR$/.idea/modules/kategory/kategory_test.iml" group="kategory" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kluent.iml" filepath="$PROJECT_DIR$/.idea/modules/kluent.iml" group="kluent" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kluent/kluent_main.iml" filepath="$PROJECT_DIR$/.idea/modules/kluent/kluent_main.iml" group="kluent" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kluent/kluent_test.iml" filepath="$PROJECT_DIR$/.idea/modules/kluent/kluent_test.iml" group="kluent" />
