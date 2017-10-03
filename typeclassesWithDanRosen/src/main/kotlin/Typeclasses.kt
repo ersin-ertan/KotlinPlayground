@@ -18,11 +18,12 @@ sealed class Expression {
 
 object ExpressionEvaluator {
 
-    fun value(expression:Expression):BigDecimal = when (expression) {
-
-        is Expression.Number -> BigDecimal.valueOf(expression.value.toLong())
-        is Expression.Plus -> value(expression.lhs) + value(expression.rhs)
-        is Expression.Minus -> value(expression.lhs) - value(expression.rhs)
+    fun value(expression:Expression):BigDecimal = with(expression) {
+        when (this) {
+            is Expression.Number -> BigDecimal.valueOf(value.toLong())
+            is Expression.Plus -> value(lhs) + value(rhs)
+            is Expression.Minus -> value(lhs) - value(rhs)
+        }
     }
 }
 
@@ -36,21 +37,18 @@ object JsonNull:JsonValue()
 
 object JsonWriter {
 
-    fun write(value:JsonValue):String = when (value) {
-        is JsonObject -> {
-            val serializedEntries = mutableListOf<String>()
-            for ((k, v) in value.entries) {
-                serializedEntries.add(k + ": " + v)
-            }
-            "{ " + serializedEntries.joinToString(", ") + " }"
+    // not that naming the input value and having the value value, you have to explicitly use this.value to get at the value
+    // when using with(value), otherwise you get the value:JsonValue from the input
+    fun write(_value:JsonValue):String = with(_value) {
+        when (this) {
+            is JsonObject ->
+                "{ " + entries.flatMap { listOf(it.key + ": " + write(it.value)) }.joinToString(", ") + " }"
+            is JsonArray -> "[ " + entries.map { write(it) }.joinToString(", ") + " ]"
+            is JsonString -> "\"" + value + "\""
+            is JsonNumber -> value.toString()
+            is JsonBoolean -> value.toString()
+            is JsonNull -> "null"
         }
-        is JsonArray -> {
-            "{ " + value.entries.joinToString(", ") + " }"
-        }
-        is JsonString -> "\"" + value + "\""
-        is JsonNumber -> value.toString()
-        is JsonBoolean -> value.toString()
-        is JsonNull -> "null"
     }
 
     // fun write(value:JsonConvertible):String = write(value.convertToJson)
@@ -62,18 +60,20 @@ interface JsonConverter<T> {
 }
 
 private val expressionJsonConverter = object:JsonConverter<Expression> {
-    override fun convertToJson(expr:Expression):JsonValue = when (expr) {
-        is Expression.Number -> JsonNumber(BigDecimal.valueOf(expr.value.toLong()))
-        is Expression.Plus -> JsonObject(
-                mapOf("op" to JsonString("+"),
-                        "lhs" to convertToJson(expr.lhs),
-                        "rhs" to convertToJson(expr.rhs)
-                ))
-        is Expression.Minus -> JsonObject(
-                mapOf("op" to JsonString("-"),
-                        "lhs" to convertToJson(expr.lhs),
-                        "rhs" to convertToJson(expr.rhs)
-                ))
+    override fun convertToJson(expr:Expression):JsonValue = with(expr) {
+        when (this) {
+            is Expression.Number -> JsonNumber(BigDecimal.valueOf(value.toLong()))
+            is Expression.Plus -> JsonObject(
+                    mapOf("op" to JsonString("+"),
+                            "lhs" to convertToJson(lhs),
+                            "rhs" to convertToJson(rhs)
+                    ))
+            is Expression.Minus -> JsonObject(
+                    mapOf("op" to JsonString("-"),
+                            "lhs" to convertToJson(lhs),
+                            "rhs" to convertToJson(rhs)
+                    ))
+        }
     }
 }
 
