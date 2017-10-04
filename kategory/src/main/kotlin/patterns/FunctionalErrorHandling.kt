@@ -7,13 +7,9 @@ import kategory.*
 
 // arm nuke launcher, aim at target, launch nuke and impact target
 
-object Nuke
-object Target
-object Impacted
-
-fun arm():Nuke = TODO()
-fun aim():Target = TODO()
-fun launch(target:Target, nuke:Nuke):Impacted = TODO()
+fun armTodo():Nuke = TODO()
+fun aimTodo():Target = TODO()
+fun launchTodo(target:Target, nuke:Nuke):Impacted = TODO()
 
 
 // Exceptions - naive implementation uses expections
@@ -117,14 +113,18 @@ val at = attackTry() // Failure(RuntimeException("system offline"))
 // Right value. Convention Left is exception, and Right is success, like fold.
 
 sealed class NukeException {
-    object SystemOffline:NukeException()
-    object RotationNeedsOil:NukeException()
-    data class MissedByMeters(val meters:Int):NukeException()
+    object SystemOffline: NukeException()
+    object RotationNeedsOil: NukeException()
+    data class MissedByMeters(val meters:Int): NukeException()
 }
 
-typealias SystemOffline = NukeException.SystemOffline
-typealias RotationNeedsOil = NukeException.RotationNeedsOil
-typealias MissedByMeters = NukeException.MissedByMeters
+object Nuke
+object Target
+object Impacted
+
+typealias SystemOffline =  NukeException.SystemOffline
+typealias RotationNeedsOil =  NukeException.RotationNeedsOil
+typealias MissedByMeters =  NukeException.MissedByMeters
 
 // this type definition is commonly known as an Algebraic data type or sum type in most FP languages.
 // Encoded using sealed hierarchies in kotlin, which are declarations of a type and all possible states
@@ -164,26 +164,29 @@ fun m() {
 // Lets rewrite as a polymorphic function that will work over any datatype for which a MonadError instance exists.
 // olymorphic code in Kategory is based on emulated Higher Kinds as described in Lightweight higher-kinded polymorphism
 // and applied to Kotlin, a lang which does not yet support Higher Kinded Types.
-
-inline fun <reified F> armM(ME:MonadError<F, NukeException> = monadError()):HK<F, Nuke> = ME.pure(Nuke)
-inline fun <reified F> aimM(ME:MonadError<F, NukeException> = monadError()):HK<F, Target> = ME.pure(Target)
-inline fun <reified F> launchM(ME:MonadError<F, NukeException> = monadError()):HK<F, Impacted> = ME.raiseError(MissedByMeters(3))
+//
+inline fun <reified F> arm(ME:MonadError<F, NukeException> = monadError()):HK<F, Nuke> = ME.pure(Nuke)
+inline fun <reified F> aim(ME:MonadError<F, NukeException> = monadError()):HK<F, Target> = ME.pure(Target)
+inline fun <reified F> launch(target:Target, nuke:Nuke, ME:MonadError<F, NukeException> = monadError()):
+        HK<F, Impacted> = ME.raiseError(MissedByMeters(5))
 
 // we can now express the same program as before in a fully polymorphic context
 
-// not working yet
-//inline fun <reified F> attackM(ME: MonadError<F, NukeException> = monadError()): HK<F, Impacted> =
-//        monadError.bindingE {
-//            val nuke = armM().bind()
-//            val target = aimM().bind()
-//            val impact = launchM(target, nuke).bind()
-//            yields(impact)
-//        }
-//
-//// since arm and bind are operations that don't depend on each other we don't need the monad comprehensions
-//
-//inline fun <reified F> attackI(ME:MonadError<F, NukeException> = monadError()):HK<F, Impacted> =
-//        ME.tupled(aimM(), armM()).flatMap({ (nuke, target) -> launchM(nuke, target) })
-//
-//val result = attackM<EitherKindPartial<NukeException>>()
-////result.ev() // Left(MissedByMeteres(4))
+inline fun <reified F> attack(ME:MonadError<F, NukeException> = monadError()):HK<F, Impacted> =
+        ME.binding {
+            val nuke = arm<F>().bind()
+            val target = aim<F>().bind()
+            val impact = launch<F>(target, nuke).bind()
+            yields(impact)
+        }
+// since arm and bind are operations that don't depend on each other we don't need the monad comprehensions
+
+inline fun <reified F> attack1(ME:MonadError<F, NukeException> = monadError()):HK<F, Impacted> =
+        ME.tupled(aim(), arm()).flatMap(ME, { (nuke, target) -> launch<F>(nuke, target) })
+
+
+fun main(args:Array<String>) {
+    val result = attack<EitherKindPartial<NukeException>>()
+    val result1 = attack(Either.monadError())
+    attack1<EitherKindPartial<NukeException>>()
+}
