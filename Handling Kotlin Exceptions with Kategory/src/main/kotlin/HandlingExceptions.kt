@@ -4,82 +4,73 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 
 // Handling Kotlin Exceptions with Kategory – A Functional Approach
-// by Roberto Guerra on Sep 15, 2017
-
+// Roberto Guerra
+// Sep 15, 2017
 // https://spantree.net/blog/2017/09/15/kotlin-exception-handling-with-kategory.html
 
+// Libs and paps that throw exceptions can lead to unexpected behaviour at runtime. We can use functional programming
+// concepts to provide APIs that give affordances at compile time about runtime failures.
 
-// Libs and aps that throw exceptions can lead to unexpected behaviour at runtime. We can use functional programming
-// concepts to provide apis that give affordances at compile time about runtime failures.
-
-
-// Limitations of traditional exception handling - gives user of the throwing apis little indication at compile time
+// Limitations of traditional exception handling - gives user of the throwing APIs little indication at compile time
 // of the exceptions for runtime.
 
 val URL = "http://gd2.mlb.com/components/game/mlb/year_2017/month_06/day_18/miniscoreboard.json"
 
 fun scores():List<Game>? {
+
     val httpClient = OkHttpClient()
     val request = Request.Builder().url(URL).build()
 
     val response = httpClient.newCall(request).execute()
 
-    if (response.isSuccessful) {
-        val body = response.body()?.string()
+    return if (response.isSuccessful) {
 
         val moshi = Moshi.Builder().build()
         val jsonAdapter = moshi.adapter(MinisScoreboardResponse::class.java)
 
+        val body = response.body()?.string()
         val msr = jsonAdapter.fromJson(body)
 
-        return msr?.data?.games?.game
-    } else {
-        return null
-    }
-
+        msr?.data?.games?.game
+    } else null
     // we can't tell where the failure is
 }
 
 // because network issues can occur, we must resiliently handle outages by handling okhttp's exceptions - but we only
 // find out the throws in production, or if we read the third party code, how about wrapping it all in a try-catch?
 
-fun scoresWithTryCatch():List<Game>? {
-    try {
-        return scores()
-    } catch (e:Exception) {
-        println("an exception occurred while fetching from MLB")
-        return null
-    }
+fun scoresWithTryCatch():List<Game>? =
+        try {
+            scores()
+        } catch (e:Exception) {
+            println("an exception occurred while fetching from MLB")
+            null
+        }
+// won't crash in production, but will fail to alert us of the issue, thus front end using scores cant react to the
+// error appropriately
 
-    // won't crash in production, but will fail to alert us of the issue, thus front end using scores cant react to the
-    // error appropriately
-}
-
-fun scoresWithErrorPropogation():List<Game>? {
-    try {
-        return scores()
-    } catch (e:Exception) {
-        println("an exception occurred while fetching from MLB")
-        throw e // <-- note this line
-    }
-
-    // but back to the issue about type signature giving no indication ofc what exceptions can be thrown, every client
-    // now needs to know and also throw the Exception so higher up on the stack can handle it
-}
+fun scoresWithErrorPropogation():List<Game>? =
+        try {
+            scores()
+        } catch (e:Exception) {
+            println("an exception occurred while fetching from MLB")
+            throw e // <-- note this line
+        }
+// but back to the issue about type signature giving no indication ofc what exceptions can be thrown, every client
+// now needs to know and also throw the Exception so higher up on the stack can handle it
 
 
 // Functional Exception Handling
 
 // most statically typed functional languages provide two abstractions for error handling and exceptions: Either and Try
 // Exceptions use Try, and Either for business logic
-// Article uses Kategory to showcase Try
+// This article uses Kategory to showcase Try
 
 // Try will take care of catching the exception and returning it to the caller, specifics need not be known till the end
 // of the call stack where we use the result
 
 
-fun scoresWithTry():Try<List<Game>> { // article didn't have the ?, and article didn't have the cast at the return
-    // but it was the cast that was needed
+fun scoresWithTry():Try<List<Game>> { // article didn't have the cast at the return but it was needed for my implementation
     val httpClient = OkHttpClient()
     return Try.invoke {
         val request = Request.Builder()
@@ -103,8 +94,8 @@ fun scoresWithTry():Try<List<Game>> { // article didn't have the ?, and article 
     }
 
     // now clients of scores can know from the type signature, that the operation may throw an exception and it must be
-    // handled. If you don't the compiler will complain to the client(I'm not seeing this warning, perhaps the ?
-    // inclusion cancels it out), we need a more functional interface for the rest of the application
+    // handled. If you don't the compiler will complain to the client we need a more functional interface for the rest
+    // of the application
 
     // Try internally represents the failure in its Failure subclass, success with Success
 }
@@ -151,7 +142,8 @@ fun main(args:Array<String>) {
         // use for comprehensions by directly invoking the monad factory on the Try type. We want to use this when we
         // need to do some operations on the Success value in a sequential manner
 
-        Try.monad().binding { // is there a performance benefit to using coroutines binding method? vs the direct call
+        Try.monad().binding {
+            // is there a performance benefit to using coroutines binding method? vs the direct call
             // and flatmap
             val s = scoresWithTry()
             val games = s.getOrElse { emptyList() }
@@ -184,17 +176,16 @@ fun main(args:Array<String>) {
         // author finds binding example above more readable
     }
 
-    fun patternMatchingWithWhen(){
+    fun patternMatchingWithWhen() {
 
         // Pattern matching with when - we can use kotlins default when to extract the value of a Try, Success the value
         // can be accessed via the value property in the Try instance. Failure, the value can be accessed via the
         // exception property. But keep in mind, if we replace one of the cases with else, we won't be able to access the
         // corresponding property because the compiler will not know which sub class it should be working with
 
-        when(scoresWithTry()){
+        when (scoresWithTry()) {
 //            is Try.Success -> scoresWithTry().value.toString // didn't work
 //            is Try.Failure -> scoresWithTry().exception.toString // didn't work
         }
     }
-
 }
