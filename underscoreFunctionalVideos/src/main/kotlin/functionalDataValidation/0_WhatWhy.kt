@@ -5,3 +5,4 @@ package functionalDataValidation
 // Simple stuff you can do weeks within starting functional programming
 
 // What - functional building blocks, composition, you don't need to know the terms to get started
+// See practice > FormFun.kt for latest version
