@@ -2,7 +2,7 @@
 // Marcin Moskala
 // http://slides.com/marcinmoskala/superpowers-of-kotlin-delegation-3-3
 
-// what is it
+// What and why delegates - manage state for well known patterns without the creation of classes, functions, contexts
 
 interface Presenter {
     fun present()

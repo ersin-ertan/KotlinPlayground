@@ -8,7 +8,7 @@ var name:String by Delegates.observable("Default") { property, oldValue, newValu
     println("$property, $oldValue, $newValue")
 }
 
-var list:List<LocalDate> by Delegates.observable(list) { _, old, new ->
+var list:List<LocalDate> by Delegates.observable(listOf(LocalDate.now())) { _, old, new ->
     if (new != old) notifyDataSetChanged()
 }
 
