@@ -1,4 +1,4 @@
-package dataclasses
+package datatypes
 
 import kategory.*
 
