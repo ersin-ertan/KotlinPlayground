@@ -7,7 +7,7 @@ import kategory.*
 
 // Common problems:
 // filling out a form, error on input, change resubmit, and do this back and forth which frustrating
-// reading config file, if configuration lib retuns Try or Either parsing looks like
+// reading config file, if configuration lib returns Try or Either parsing looks like
 
 data class ConnectionParams(val url:String, val port:Int)
 
