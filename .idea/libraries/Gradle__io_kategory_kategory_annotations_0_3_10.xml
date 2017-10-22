@@ -2,10 +2,12 @@
   <library name="Gradle: io.kategory:kategory-annotations:0.3.10">
     <CLASSES>
       <root url="jar://$USER_HOME$/.sdkman/candidates/gradle/4.2/caches/modules-2/files-2.1/io.kategory/kategory-annotations/0.3.10/9b47f87492dc286edb057b15ad28831a20af3e31/kategory-annotations-0.3.10.jar!/" />
+      <root url="jar://$USER_HOME$/.sdkman/candidates/gradle/4.2.1/caches/modules-2/files-2.1/io.kategory/kategory-annotations/0.3.10/9b47f87492dc286edb057b15ad28831a20af3e31/kategory-annotations-0.3.10.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.sdkman/candidates/gradle/4.2/caches/modules-2/files-2.1/io.kategory/kategory-annotations/0.3.10/4340c2d540ce1e457d960da06be032332fa8f940/kategory-annotations-0.3.10-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.sdkman/candidates/gradle/4.2.1/caches/modules-2/files-2.1/io.kategory/kategory-annotations/0.3.10/4340c2d540ce1e457d960da06be032332fa8f940/kategory-annotations-0.3.10-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

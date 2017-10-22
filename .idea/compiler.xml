@@ -7,6 +7,8 @@
       <module name="10KotlinTricks_test" target="1.8" />
       <module name="47degrees_main" target="1.8" />
       <module name="47degrees_test" target="1.8" />
+      <module name="Algorithms_main" target="1.8" />
+      <module name="Algorithms_test" target="1.8" />
       <module name="Coroutines_main" target="1.8" />
       <module name="Coroutines_test" target="1.8" />
       <module name="DSLs_main" target="1.8" />

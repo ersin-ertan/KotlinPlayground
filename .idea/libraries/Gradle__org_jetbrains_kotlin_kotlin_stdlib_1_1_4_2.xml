@@ -2,10 +2,12 @@
   <library name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.1.4-2">
     <CLASSES>
       <root url="jar://$USER_HOME$/.sdkman/candidates/gradle/4.2/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.1.4-2/fec983b2608a8a91a1b87dba18d247d692cf6b51/kotlin-stdlib-1.1.4-2.jar!/" />
+      <root url="jar://$USER_HOME$/.sdkman/candidates/gradle/4.2.1/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.1.4-2/fec983b2608a8a91a1b87dba18d247d692cf6b51/kotlin-stdlib-1.1.4-2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.sdkman/candidates/gradle/4.2/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.1.4-2/c8acfe120e74e9c18d30449042679a56fe98d371/kotlin-stdlib-1.1.4-2-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.sdkman/candidates/gradle/4.2.1/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.1.4-2/c8acfe120e74e9c18d30449042679a56fe98d371/kotlin-stdlib-1.1.4-2-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

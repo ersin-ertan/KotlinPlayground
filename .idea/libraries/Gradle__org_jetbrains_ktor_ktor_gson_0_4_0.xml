@@ -2,10 +2,12 @@
   <library name="Gradle: org.jetbrains.ktor:ktor-gson:0.4.0">
     <CLASSES>
       <root url="jar://$USER_HOME$/.sdkman/candidates/gradle/4.2/caches/modules-2/files-2.1/org.jetbrains.ktor/ktor-gson/0.4.0/a5c64c865396042156763536f3e6e5649a6b8b68/ktor-gson-0.4.0.jar!/" />
+      <root url="jar://$USER_HOME$/.sdkman/candidates/gradle/4.2.1/caches/modules-2/files-2.1/org.jetbrains.ktor/ktor-gson/0.4.0/a5c64c865396042156763536f3e6e5649a6b8b68/ktor-gson-0.4.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.sdkman/candidates/gradle/4.2/caches/modules-2/files-2.1/org.jetbrains.ktor/ktor-gson/0.4.0/a26d7c0473c34648f9a4624b19ec5f0091cea4c2/ktor-gson-0.4.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.sdkman/candidates/gradle/4.2.1/caches/modules-2/files-2.1/org.jetbrains.ktor/ktor-gson/0.4.0/a26d7c0473c34648f9a4624b19ec5f0091cea4c2/ktor-gson-0.4.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

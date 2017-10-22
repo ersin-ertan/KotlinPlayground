@@ -19,7 +19,7 @@
           </option>
           <option name="pluginClasspaths">
             <array>
-              <option value="$USER_HOME$/.sdkman/candidates/gradle/4.2/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-gradle-serialization-plugin/0.1/121eab57df1b68bd64214fbd6f4a0c8eca071d5d/kotlinx-gradle-serialization-plugin-0.1.jar" />
+              <option value="$USER_HOME$/.sdkman/candidates/gradle/4.2.1/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-gradle-serialization-plugin/0.1/121eab57df1b68bd64214fbd6f4a0c8eca071d5d/kotlinx-gradle-serialization-plugin-0.1.jar" />
             </array>
           </option>
         </compilerArguments>

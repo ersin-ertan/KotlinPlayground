@@ -3,10 +3,12 @@
     <CLASSES>
       <root url="file://$PROJECT_DIR$/Could not find io.kategory:kategory:0.3.10." />
       <root url="jar://$USER_HOME$/.sdkman/candidates/gradle/4.2/caches/modules-2/files-2.1/io.kategory/kategory/0.3.10/526158eaed6289c214527fefda10ad1324d1a1d1/kategory-0.3.10.jar!/" />
+      <root url="jar://$USER_HOME$/.sdkman/candidates/gradle/4.2.1/caches/modules-2/files-2.1/io.kategory/kategory/0.3.10/526158eaed6289c214527fefda10ad1324d1a1d1/kategory-0.3.10.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.sdkman/candidates/gradle/4.2/caches/modules-2/files-2.1/io.kategory/kategory/0.3.10/6b82c559bfaebba812f3c119cb0cd0a36e4cce0e/kategory-0.3.10-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.sdkman/candidates/gradle/4.2.1/caches/modules-2/files-2.1/io.kategory/kategory/0.3.10/6b82c559bfaebba812f3c119cb0cd0a36e4cce0e/kategory-0.3.10-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

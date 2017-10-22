@@ -5,12 +5,14 @@
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="1.8" />
+        <option name="gradleHome" value="$USER_HOME$/.sdkman/candidates/gradle/current" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/10KotlinTricks" />
             <option value="$PROJECT_DIR$/47degrees" />
+            <option value="$PROJECT_DIR$/Algorithms" />
             <option value="$PROJECT_DIR$/Coroutines" />
             <option value="$PROJECT_DIR$/DSLs" />
             <option value="$PROJECT_DIR$/Handling Kotlin Exceptions with Kategory" />
