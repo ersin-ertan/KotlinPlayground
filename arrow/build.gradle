@@ -1,8 +1,4 @@
-group 'ca.ersin'
-version '1.0-SNAPSHOT'
-
 buildscript {
-
     ext.kotlin_version = '1.2.31'
 
     repositories {
@@ -13,24 +9,29 @@ buildscript {
     }
 }
 
+group 'ca.ersin'
+version '1.0-SNAPSHOT'
+
 apply plugin: 'java'
 apply plugin: 'kotlin'
 
 sourceCompatibility = 1.8
 
-allprojects {
-    repositories {
-        jcenter()
-    }
-}
-
 repositories {
     mavenCentral()
 }
 
+String arrowV = '0.7.1'
+
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compile 'io.arrow-kt:arrow-core:' + arrowV
+    compile 'io.arrow-kt:arrow-instances-core:' + arrowV
+
+
+
 }
 
 compileKotlin {
@@ -39,5 +40,3 @@ compileKotlin {
 compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
-
-

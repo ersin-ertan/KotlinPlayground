@@ -9,8 +9,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/47degrees/47degrees_main.iml" filepath="$PROJECT_DIR$/.idea/modules/47degrees/47degrees_main.iml" group="47degrees" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/47degrees/47degrees_test.iml" filepath="$PROJECT_DIR$/.idea/modules/47degrees/47degrees_test.iml" group="47degrees" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Algorithms.iml" filepath="$PROJECT_DIR$/.idea/modules/Algorithms.iml" group="Algorithms" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Algorithms/Algorithms_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Algorithms/Algorithms_main.iml" group="Algorithms" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Algorithms/Algorithms_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Algorithms/Algorithms_test.iml" group="Algorithms" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Coroutines.iml" filepath="$PROJECT_DIR$/.idea/modules/Coroutines.iml" group="Coroutines" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Coroutines/Coroutines_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Coroutines/Coroutines_main.iml" group="Coroutines" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Coroutines/Coroutines_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Coroutines/Coroutines_test.iml" group="Coroutines" />
@@ -26,6 +24,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Ktor.iml" filepath="$PROJECT_DIR$/.idea/modules/Ktor.iml" group="Ktor" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Ktor/Ktor_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Ktor/Ktor_main.iml" group="Ktor" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Ktor/Ktor_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Ktor/Ktor_test.iml" group="Ktor" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/arrow.iml" filepath="$PROJECT_DIR$/.idea/modules/arrow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/arrow_main.iml" filepath="$PROJECT_DIR$/.idea/modules/arrow_main.iml" group="arrow" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/arrow_test.iml" filepath="$PROJECT_DIR$/.idea/modules/arrow_test.iml" group="arrow" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/idiomaticKotlin.iml" filepath="$PROJECT_DIR$/.idea/modules/idiomaticKotlin.iml" group="idiomaticKotlin" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/idiomaticKotlin/idiomaticKotlin_main.iml" filepath="$PROJECT_DIR$/.idea/modules/idiomaticKotlin/idiomaticKotlin_main.iml" group="idiomaticKotlin" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/idiomaticKotlin/idiomaticKotlin_test.iml" filepath="$PROJECT_DIR$/.idea/modules/idiomaticKotlin/idiomaticKotlin_test.iml" group="idiomaticKotlin" />
