@@ -27,6 +27,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/arrow.iml" filepath="$PROJECT_DIR$/.idea/modules/arrow.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/arrow_main.iml" filepath="$PROJECT_DIR$/.idea/modules/arrow_main.iml" group="arrow" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/arrow_test.iml" filepath="$PROJECT_DIR$/.idea/modules/arrow_test.iml" group="arrow" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/comp.lang.functional.iml" filepath="$PROJECT_DIR$/.idea/modules/comp.lang.functional.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/comp.lang.functional_main.iml" filepath="$PROJECT_DIR$/.idea/modules/comp.lang.functional_main.iml" group="comp.lang.functional" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/comp.lang.functional_test.iml" filepath="$PROJECT_DIR$/.idea/modules/comp.lang.functional_test.iml" group="comp.lang.functional" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/idiomaticKotlin.iml" filepath="$PROJECT_DIR$/.idea/modules/idiomaticKotlin.iml" group="idiomaticKotlin" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/idiomaticKotlin/idiomaticKotlin_main.iml" filepath="$PROJECT_DIR$/.idea/modules/idiomaticKotlin/idiomaticKotlin_main.iml" group="idiomaticKotlin" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/idiomaticKotlin/idiomaticKotlin_test.iml" filepath="$PROJECT_DIR$/.idea/modules/idiomaticKotlin/idiomaticKotlin_test.iml" group="idiomaticKotlin" />
