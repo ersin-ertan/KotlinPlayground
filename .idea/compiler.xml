@@ -45,10 +45,14 @@
       <module name="Ktor_test" target="1.8" />
       <module name="reference_main" target="1.8" />
       <module name="reference_test" target="1.8" />
+      <module name="scalaexercises-cats_main" target="1.8" />
+      <module name="scalaexercises-cats_test" target="1.8" />
       <module name="spek_main" target="1.8" />
       <module name="spek_test" target="1.8" />
       <module name="superpowersOfKotlinDelegation_main" target="1.8" />
       <module name="superpowersOfKotlinDelegation_test" target="1.8" />
+      <module name="t_main" target="1.8" />
+      <module name="t_test" target="1.8" />
       <module name="typeclassesWithDanRosen_main" target="1.8" />
       <module name="typeclassesWithDanRosen_test" target="1.8" />
       <module name="underscoreFunctionalVideos_main" target="1.8" />

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="scalaexercises-cats:main" external.linked.project.path="$MODULE_DIR$/../../scalaexercises-cats" external.root.project.path="$MODULE_DIR$/../../scalaexercises-cats" external.system.id="GRADLE" external.system.module.group="ca.ersin" external.system.module.type="sourceSet" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="kotlin-language" name="Kotlin">
+      <configuration version="3" platform="JVM 1.8" useProjectSettings="false">
+        <compilerSettings />
+        <compilerArguments>
+          <option name="destination" value="$MODULE_DIR$/../../scalaexercises-cats/build/classes/kotlin/main" />
+          <option name="classpath" value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.3.0/7157cc6bc26328e2e97723d65d4ed7d7eddf603b/kotlin-stdlib-jdk8-1.3.0.jar:/home/ersin/.gradle/caches/modules-2/files-2.1/io.arrow-kt/arrow-syntax/0.8.0/b52eb2584c18b5f6d401981453fdbfe041cadbe7/arrow-syntax-0.8.0.jar:/home/ersin/.gradle/caches/modules-2/files-2.1/io.arrow-kt/arrow-instances-data/0.8.0/99545c9d47cb523a9a2604ce66bf70a13c6f7fd2/arrow-instances-data-0.8.0.jar:/home/ersin/.gradle/caches/modules-2/files-2.1/io.arrow-kt/arrow-data/0.8.0/c92aa3c442df5989626cbb720243d7f5cfa29d15/arrow-data-0.8.0.jar:/home/ersin/.gradle/caches/modules-2/files-2.1/io.arrow-kt/arrow-instances-core/0.8.0/765584936cf1ddbc21477edb10264626c771a149/arrow-instances-core-0.8.0.jar:/home/ersin/.gradle/caches/modules-2/files-2.1/io.arrow-kt/arrow-typeclasses/0.8.0/282faece57c8067a79fc8e7278d2d8d817ddebed/arrow-typeclasses-0.8.0.jar:/home/ersin/.gradle/caches/modules-2/files-2.1/io.arrow-kt/arrow-core/0.8.0/51c52ee4bd8d48925d60605d84d9cf27c8fe3f37/arrow-core-0.8.0.jar:/home/ersin/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.3.0/683e04a4e7f17437d7e1390480f312e122e42e9e/kotlin-stdlib-jdk7-1.3.0.jar:/home/ersin/.gradle/caches/modules-2/files-2.1/io.arrow-kt/arrow-annotations/0.8.0/f2ef6a8e4a297d765e7b8d96d630357f555413a0/arrow-annotations-0.8.0.jar:/home/ersin/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.0/a134b0cfe9bb44f98b0b3e889cda07923eea9428/kotlin-stdlib-1.3.0.jar:/home/ersin/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.0/84a2e0288dc17cd64d692eb1e5e0de8cd5ff0846/kotlin-stdlib-common-1.3.0.jar:/home/ersin/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar:/home/ersin/.gradle/caches/modules-2/files-2.1/io.kindedj/kindedj/1.1.0/462731347602a3f24e3f21feec50928f9a657741/kindedj-1.1.0.jar" />
+          <option name="noStdlib" value="true" />
+          <option name="noReflect" value="true" />
+          <option name="moduleName" value="scalaexercises-cats" />
+          <option name="jvmTarget" value="1.8" />
+          <option name="addCompilerBuiltIns" value="true" />
+          <option name="loadBuiltInsFromDependencies" value="true" />
+          <option name="languageVersion" value="1.3" />
+          <option name="apiVersion" value="1.3" />
+          <option name="pluginOptions">
+            <array />
+          </option>
+          <option name="pluginClasspaths">
+            <array />
+          </option>
+        </compilerArguments>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/../../scalaexercises-cats/out/production/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../scalaexercises-cats/src/main">
+      <sourceFolder url="file://$MODULE_DIR$/../../scalaexercises-cats/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../scalaexercises-cats/src/main/kotlin" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../scalaexercises-cats/src/main/resources" type="java-resource" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.arrow-kt:arrow-syntax:0.8.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.arrow-kt:arrow-instances-data:0.8.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.arrow-kt:arrow-data:0.8.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.arrow-kt:arrow-instances-core:0.8.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.arrow-kt:arrow-typeclasses:0.8.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.arrow-kt:arrow-core:0.8.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.arrow-kt:arrow-annotations:0.8.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.3.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.3.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.kindedj:kindedj:1.1.0" level="project" />
+  </component>
+</module>

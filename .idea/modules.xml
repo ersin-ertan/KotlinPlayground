@@ -63,12 +63,18 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/reference.iml" filepath="$PROJECT_DIR$/.idea/modules/reference.iml" group="reference" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/reference/reference_main.iml" filepath="$PROJECT_DIR$/.idea/modules/reference/reference_main.iml" group="reference" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/reference/reference_test.iml" filepath="$PROJECT_DIR$/.idea/modules/reference/reference_test.iml" group="reference" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scalaexercises-cats.iml" filepath="$PROJECT_DIR$/.idea/modules/scalaexercises-cats.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scalaexercises-cats_main.iml" filepath="$PROJECT_DIR$/.idea/modules/scalaexercises-cats_main.iml" group="scalaexercises-cats" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scalaexercises-cats_test.iml" filepath="$PROJECT_DIR$/.idea/modules/scalaexercises-cats_test.iml" group="scalaexercises-cats" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spek.iml" filepath="$PROJECT_DIR$/.idea/modules/spek.iml" group="spek" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spek/spek_main.iml" filepath="$PROJECT_DIR$/.idea/modules/spek/spek_main.iml" group="spek" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spek/spek_test.iml" filepath="$PROJECT_DIR$/.idea/modules/spek/spek_test.iml" group="spek" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/superpowersOfKotlinDelegation.iml" filepath="$PROJECT_DIR$/.idea/modules/superpowersOfKotlinDelegation.iml" group="superpowersOfKotlinDelegation" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/superpowersOfKotlinDelegation/superpowersOfKotlinDelegation_main.iml" filepath="$PROJECT_DIR$/.idea/modules/superpowersOfKotlinDelegation/superpowersOfKotlinDelegation_main.iml" group="superpowersOfKotlinDelegation" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/superpowersOfKotlinDelegation/superpowersOfKotlinDelegation_test.iml" filepath="$PROJECT_DIR$/.idea/modules/superpowersOfKotlinDelegation/superpowersOfKotlinDelegation_test.iml" group="superpowersOfKotlinDelegation" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/t.iml" filepath="$PROJECT_DIR$/.idea/modules/t.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/t_main.iml" filepath="$PROJECT_DIR$/.idea/modules/t_main.iml" group="t" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/t_test.iml" filepath="$PROJECT_DIR$/.idea/modules/t_test.iml" group="t" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/typeclassesWithDanRosen.iml" filepath="$PROJECT_DIR$/.idea/modules/typeclassesWithDanRosen.iml" group="typeclassesWithDanRosen" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/typeclassesWithDanRosen/typeclassesWithDanRosen_main.iml" filepath="$PROJECT_DIR$/.idea/modules/typeclassesWithDanRosen/typeclassesWithDanRosen_main.iml" group="typeclassesWithDanRosen" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/typeclassesWithDanRosen/typeclassesWithDanRosen_test.iml" filepath="$PROJECT_DIR$/.idea/modules/typeclassesWithDanRosen/typeclassesWithDanRosen_test.iml" group="typeclassesWithDanRosen" />
