@@ -4,5 +4,7 @@ fun main(args: Array<String>) {
 
 //    semigroup()
 //    monoid()
-    functor()
+//    functor()
+//    apply() // could not do
+    applicative()
 }
