@@ -1,6 +1,9 @@
 import arrow.core.None
 import arrow.core.Option
 import arrow.core.some
+import arrow.data.ForListK
+import arrow.data.ListK
+import arrow.instances.extensions
 
 fun apply() {
 
@@ -15,6 +18,16 @@ fun apply() {
 
 //    val listOpt = ListK.apply().
 //    val plusOne = { x: Int -> x + 1 }
+
+    ForListK extensions {
+
+    }
+
+    ListK.just(listOf(2)).run {
+
+    }
+
+
 
 
 }

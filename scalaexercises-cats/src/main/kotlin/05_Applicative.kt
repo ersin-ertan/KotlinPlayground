@@ -12,6 +12,9 @@ fun applicative() {
 
     ListK.applicative().compose(Option.applicative()).run { just(1) }.p()
 
+
     Option.monad().run { just(1) }.p()
     Option.applicative().run { just(1) }.p()
+
+
 }

@@ -6,5 +6,7 @@ fun main(args: Array<String>) {
 //    monoid()
 //    functor()
 //    apply() // could not do
-    applicative()
+//    applicative()
+//    monad()
+    foldable()
 }
